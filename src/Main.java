@@ -9,10 +9,8 @@ public class Main {
         System.out.print("Input string for invert: ");
         String inputString = in.nextLine();
 
-        StringRecursive sr = new StringRecursive(inputString);
         System.out.println("Inputstring: " + inputString);
-        String invertString = sr.getInvertString();
-        System.out.println("Invertstring: " + invertString);
+        System.out.println("Invertstring: " + StringInverter.invertString(inputString));
 
 
 
