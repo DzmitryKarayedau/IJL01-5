@@ -9,10 +9,8 @@ public class Main {
         System.out.print("Input string for invert: ");
         String inputString = in.nextLine();
 
-        System.out.println("Inputstring: " + inputString);
-        System.out.println("Invertstring: " + StringInverter.invertString(inputString));
-
-
+        System.out.println(String.format(" Inputstring: %s", inputString));
+        System.out.println(String.format("Invertstring: %s", StringInverter.invertString(inputString)));
 
     }
 }
