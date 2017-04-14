@@ -1,3 +1,7 @@
+package com.emerline.ijl01_5;
+
+import com.emerline.ijl01_5.utils.StringInverter;
+
 import java.util.Scanner;
 
 public class Main {
