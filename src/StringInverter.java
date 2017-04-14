@@ -3,37 +3,35 @@
  */
 public class StringInverter {
 
-    public static String invertString(String stringToInvert){
-        if (stringToInvert == null){
+    public static String invertString(String stringToInvert) {
+        if (stringToInvert == null) {
             return null;
-        }
-        else{
+
+        } else {
             int stringLength = stringToInvert.length();
-            if (stringLength < 2){
+            if (stringLength < 2) {
                 return stringToInvert;
-            }
-            else{
-                char[] invertedChars = new char[stringToInvert.length()];
-                invertedChars = stringToInvert.toCharArray();
-                String invertedString = new String(recursiveInvertString(0,invertedChars));
+            } else {
+                String invertedString = new String(recursiveInvertString(0, stringToInvert));
                 return invertedString;
             }
         }
     }
 
-    private static char[] recursiveInvertString(int step , char[] invertedString){
+    private static String recursiveInvertString(int step, String invertedString) {
         char tempChar;
-        int lastIndex = invertedString.length-1;
+        int lastIndex = invertedString.length() - 1;
+        StringBuilder InvString = new StringBuilder(invertedString);
+        tempChar = InvString.charAt(0 + step);
+        InvString.setCharAt(0 + step, InvString.charAt(lastIndex - step));
+        InvString.setCharAt(lastIndex - step, tempChar);
 
-        tempChar = invertedString[0+step];
-        invertedString[0+step] = invertedString[lastIndex-step];
-        invertedString[lastIndex-step] = tempChar;
-
-        if (invertedString.length/2 > step+1){
-            invertedString = recursiveInvertString(step+1 , invertedString);
+        if (InvString.length() / 2 > step + 1) {
+            invertedString = recursiveInvertString(step + 1, InvString.toString());
+            return invertedString;
         }
 
-        return invertedString;
+        return InvString.toString();
     }
 
 }
