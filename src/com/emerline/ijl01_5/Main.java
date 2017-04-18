@@ -1,3 +1,7 @@
+package com.emerline.ijl01_5;
+
+import com.emerline.ijl01_5.utils.StringInverter;
+
 import java.util.Scanner;
 
 public class Main {
@@ -9,10 +13,8 @@ public class Main {
         System.out.print("Input string for invert: ");
         String inputString = in.nextLine();
 
-        System.out.println("Inputstring: " + inputString);
-        System.out.println("Invertstring: " + StringInverter.invertString(inputString));
-
-
+        System.out.printf(" Inputstring: %s%n", inputString);
+        System.out.printf("Invertstring: %s%n", StringInverter.invertString(inputString));
 
     }
 }
